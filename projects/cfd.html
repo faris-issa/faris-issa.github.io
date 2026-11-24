@@ -1,14 +1,631 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Computational Fluid Dynamics | Faris Issa</title><meta name="description" content="ANSYS Fluent simulation studies in heat transfer, compressible flow and multiphase flow."><link rel="stylesheet" href="../assets/style.css"><style>.cfd-figure img{object-fit:contain;background:white;aspect-ratio:16/10}.cfd-gallery{align-items:start;margin-bottom:24px}.cfd-gallery figcaption{line-height:1.5}.study{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}.study h3{font-size:25px}.cfd-figure a{display:block}.cfd-figure a:hover img{border-color:var(--accent)}.cfd-hero img{aspect-ratio:16/10;object-fit:contain;background:white}.cfd-label{font-size:13px;color:var(--muted)}.cfd-metrics{margin-bottom:24px}.table-wrap td:first-child{width:auto}@media(max-width:600px){.cfd-figure img{aspect-ratio:auto;min-height:100px}.cfd-hero img{aspect-ratio:auto}}</style></head>
-<body><a class="skip" href="#main">Skip to content</a><header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="../index.html">FARIS ISSA / ENGINEERING</a><div class="navlinks"><a href="../index.html#about">About</a><a href="../index.html#projects" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../index.html#contact">Contact</a></div></nav></header><main class="wrap" id="main">
-<section class="page-intro"><a class="back" href="../index.html#projects">← All projects</a><p class="eyebrow">Project 03 / Engineering simulation</p><div class="feature"><div><h1>Computational Fluid Dynamics</h1><p class="lead">Numerical modeling of thermal transport, compressible flow and transient multiphase systems.</p><p class="project-label">Arizona State University · MAE 460 Applied CFD · Fall 2026</p><div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Meshing</span><span class="tag">Heat transfer</span><span class="tag">VOF</span><span class="tag">Data analysis</span></div></div><figure class="photo cfd-hero"><a href="../images/cfd/helical-pipe.webp" target="_blank" rel="noopener"><img src="../images/cfd/helical-pipe.webp" alt="ANSYS thermal contour of a heated helical pipe"></a><figcaption>Original simulation: temperature distribution along a helical pipe.</figcaption></figure></div><div class="metrics cfd-metrics"><div class="metric"><strong>2</strong><span>Completed CFD projects</span></div><div class="metric"><strong>6</strong><span>Simulation studies</span></div><div class="metric"><strong>102,400</strong><span>Elements in droplet model</span></div></div><p class="note">Academic simulation results; not physical test measurements. Select any figure to view it at full size.</p><div class="links"><a class="button" href="#thermal">01 / Thermal &amp; compressible flow</a><a class="button" href="#multiphase">02 / Multiphase flow</a></div></section>
-<section class="section" id="thermal"><p class="eyebrow">MAE 460 / Project 1</p><h2>Internal Flow with Thermodynamics</h2><p class="lead">Investigated the relationship between fluid motion, heat transfer, gravity and compressibility using ANSYS Fluent.</p>
-<article class="study"><h3>01 — Buoyancy-driven thermal convection</h3><p>Modeled transient internal water flow using the Boussinesq approximation. Calculated reference properties from a water-density correlation and compared temperature and velocity fields under Earth and Moon gravity.</p><div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Operating temperature</td><td>308.15 K</td></tr><tr><td>Operating density</td><td>994.03 kg/m³</td></tr><tr><td>Thermal expansion coefficient</td><td>3.458 × 10⁻⁴ K⁻¹</td></tr><tr><td>Earth / Moon gravity magnitude</td><td>9.81 / 1.62 m/s²</td></tr></tbody></table></div><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/tank-mesh.webp" target="_blank" rel="noopener"><img src="../images/cfd/tank-mesh.webp" alt="Tank mesh along the vertical symmetry plane." loading="lazy"></a><figcaption>Tank mesh along the vertical symmetry plane.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/tank-temperature-300s.webp" target="_blank" rel="noopener"><img src="../images/cfd/tank-temperature-300s.webp" alt="Earth gravity: temperature field at 300 s." loading="lazy"></a><figcaption>Earth gravity: temperature field at 300 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/earth-temperature.webp" target="_blank" rel="noopener"><img src="../images/cfd/earth-temperature.webp" alt="Earth gravity: temperature contour at 60 s." loading="lazy"></a><figcaption>Earth gravity: temperature contour at 60 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/moon-temperature.webp" target="_blank" rel="noopener"><img src="../images/cfd/moon-temperature.webp" alt="Moon gravity: temperature contour at 60 s." loading="lazy"></a><figcaption>Moon gravity: temperature contour at 60 s.</figcaption></figure></div><p><strong>Result:</strong> The 60-second contours show a more pronounced downward cold-water plume under Earth gravity, while the Moon case exhibits a shallower trajectory under reduced buoyancy.</p></article>
-<article class="study"><h3>02 — Helical pipe heat transfer and viscous heating</h3><p>Evaluated heated-wall flow over four inlet velocities and compared Fluent temperature-rise predictions with analytical hand calculations. A separate glycerin study examined viscous heating across four flow velocities.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/helical-pipe.webp" target="_blank" rel="noopener"><img src="../images/cfd/helical-pipe.webp" alt="Heated helical pipe: surface temperature distribution." loading="lazy"></a><figcaption>Heated helical pipe: surface temperature distribution.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/heat-transfer-comparison.webp" target="_blank" rel="noopener"><img src="../images/cfd/heat-transfer-comparison.webp" alt="Fluent and hand-calculated temperature rise versus inlet velocity." loading="lazy"></a><figcaption>Fluent and hand-calculated temperature rise versus inlet velocity.</figcaption></figure></div><div class="table-wrap"><table><thead><tr><th>Inlet velocity (m/s)</th><th>Fluent ΔT (K)</th><th>Hand calculation ΔT (K)</th></tr></thead><tbody><tr><td>0.01</td><td>13.88</td><td>13.589</td></tr><tr><td>0.02</td><td>7.06</td><td>6.795</td></tr><tr><td>0.04</td><td>3.60</td><td>3.397</td></tr><tr><td>0.08</td><td>1.83</td><td>1.699</td></tr></tbody></table></div><p><strong>Result:</strong> Temperature rise decreased as inlet velocity increased. Across the four heated-wall cases, the largest absolute difference between the numerical and analytical temperature rise was 0.291 K.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/viscous-heating.webp" target="_blank" rel="noopener"><img src="../images/cfd/viscous-heating.webp" alt="Glycerin: temperature rise with viscous heating enabled." loading="lazy"></a><figcaption>Glycerin: temperature rise with viscous heating enabled.</figcaption></figure></div><p>In the glycerin simulations, the predicted viscous temperature rise increased from 0.032 K at 1.5 m/s to 0.400 K at 12 m/s.</p></article>
-<article class="study"><h3>03 — Transient compressible flow</h3><p>Compared two pressure-driven chamber-flow cases with the same 200 Pa pressure difference but different absolute pressures. Used a transient time step of 5.0 × 10⁻⁵ s and examined density, temperature, axial velocity and Mach number at 0.01 s.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/compressible-case1.webp" target="_blank" rel="noopener"><img src="../images/cfd/compressible-case1.webp" alt="Case 1: axial velocity contour at 0.01 s." loading="lazy"></a><figcaption>Case 1: axial velocity contour at 0.01 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/compressible-case2.webp" target="_blank" rel="noopener"><img src="../images/cfd/compressible-case2.webp" alt="Case 2: axial velocity contour at 0.01 s." loading="lazy"></a><figcaption>Case 2: axial velocity contour at 0.01 s.</figcaption></figure></div><p><strong>Result:</strong> Peak Mach numbers were approximately 0.064 and 0.124 for Cases 1 and 2, respectively. Both remained subsonic; the lower absolute pressure case produced a faster jet and stronger cooling.</p></article></section>
-<section class="section" id="multiphase"><p class="eyebrow">MAE 460 / Project 2</p><h2>Transient Multiphase Flow</h2><p class="lead">Applied the Volume of Fluid (VOF) method to track phase interfaces and compare the effects of ventilation, material properties and gravity.</p>
-<article class="study"><h3>01 — Warehouse ventilation</h3><p>Compared passive ventilation with a fresh-air inlet in a two-dimensional methane leakage model. Both configurations used the same structured quadrilateral mesh (8,400 elements), 0.01 s time step and 7 s simulation duration to isolate the effect of ventilation.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/warehouse-passive.webp" target="_blank" rel="noopener"><img src="../images/cfd/warehouse-passive.webp" alt="Case A: methane volume fraction at 2.5 s, side inlet closed." loading="lazy"></a><figcaption>Case A: methane volume fraction at 2.5 s, side inlet closed.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/warehouse-active.webp" target="_blank" rel="noopener"><img src="../images/cfd/warehouse-active.webp" alt="Case B: methane volume fraction at 2.5 s, side inlet open." loading="lazy"></a><figcaption>Case B: methane volume fraction at 2.5 s, side inlet open.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/warehouse-index-a.webp" target="_blank" rel="noopener"><img src="../images/cfd/warehouse-index-a.webp" alt="Case A: D-index over 7 s." loading="lazy"></a><figcaption>Case A: D-index over 7 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/warehouse-index-b.webp" target="_blank" rel="noopener"><img src="../images/cfd/warehouse-index-b.webp" alt="Case B: D-index over 7 s." loading="lazy"></a><figcaption>Case B: D-index over 7 s.</figcaption></figure></div><div class="outcome"><p class="eyebrow">Simulation result</p><h3>Approximately 16.5% lower D-index</h3><p>At 7 s, the reported D-index decreased from approximately 0.121 to 0.101 with added ventilation. The relative reduction is calculated from these approximate report values, not from a physical experiment.</p></div><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/warehouse-velocity.webp" target="_blank" rel="noopener"><img src="../images/cfd/warehouse-velocity.webp" alt="Case B: mixture velocity magnitude at 7 s." loading="lazy"></a><figcaption>Case B: mixture velocity magnitude at 7 s.</figcaption></figure></div></article>
-<article class="study"><h3>02 — Liquid droplets on an inclined plate</h3><p>Compared engine oil and mercury using the same 30° inclined geometry, mesh, initial droplet shape and transient settings. Used laminar VOF to visualize how each liquid interface changed over 0.10 s.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/droplet-initial.webp" target="_blank" rel="noopener"><img src="../images/cfd/droplet-initial.webp" alt="Engine oil: initial hemispherical droplet at 0 s." loading="lazy"></a><figcaption>Engine oil: initial hemispherical droplet at 0 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/droplet-oil.webp" target="_blank" rel="noopener"><img src="../images/cfd/droplet-oil.webp" alt="Engine oil: droplet shape at 0.10 s." loading="lazy"></a><figcaption>Engine oil: droplet shape at 0.10 s.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/droplet-mercury.webp" target="_blank" rel="noopener"><img src="../images/cfd/droplet-mercury.webp" alt="Mercury: droplet shape at 0.10 s." loading="lazy"></a><figcaption>Mercury: droplet shape at 0.10 s.</figcaption></figure></div><p><strong>Result:</strong> Mercury advanced and spread farther downslope than engine oil during the simulated interval. The study used 102,400 elements and a time step of 0.001 s for both cases.</p></article>
-<article class="study"><h3>03 — Free-surface water oscillation in a U-pipe</h3><p>Modeled a three-dimensional U-pipe with unequal initial water levels and examined the oscillating air mass flow through the left opening. Compared Earth and Mars gravity with otherwise unchanged boundary conditions.</p><div class="gallery cfd-gallery"><figure class="photo cfd-figure"><a href="../images/cfd/utube-earth.webp" target="_blank" rel="noopener"><img src="../images/cfd/utube-earth.webp" alt="Earth gravity: air mass flow rate at the left opening." loading="lazy"></a><figcaption>Earth gravity: air mass flow rate at the left opening.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/utube-mars.webp" target="_blank" rel="noopener"><img src="../images/cfd/utube-mars.webp" alt="Mars gravity: air mass flow rate at the left opening." loading="lazy"></a><figcaption>Mars gravity: air mass flow rate at the left opening.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/utube-quarter.webp" target="_blank" rel="noopener"><img src="../images/cfd/utube-quarter.webp" alt="U-pipe mixture y-velocity at approximately 0.25 period." loading="lazy"></a><figcaption>U-pipe mixture y-velocity at approximately 0.25 period.</figcaption></figure><figure class="photo cfd-figure"><a href="../images/cfd/utube-three-quarter.webp" target="_blank" rel="noopener"><img src="../images/cfd/utube-three-quarter.webp" alt="U-pipe mixture y-velocity at approximately 0.75 period." loading="lazy"></a><figcaption>U-pipe mixture y-velocity at approximately 0.75 period.</figcaption></figure></div><div class="table-wrap"><table><thead><tr><th>Quantity</th><th>Earth</th><th>Mars</th></tr></thead><tbody><tr><td>Gravity magnitude</td><td>9.81 m/s²</td><td>3.72 m/s²</td></tr><tr><td>Oscillation period (reported)</td><td>1.0 s</td><td>1.7 s</td></tr><tr><td>Mesh elements</td><td>13,806</td><td>13,806</td></tr></tbody></table></div><p><strong>Result:</strong> Reduced gravity increased the oscillation period, consistent with the expected inverse-square-root dependence on gravity. The velocity contours show the reversal in flow direction across the two legs.</p></article></section>
-<section class="section"><p class="eyebrow">Engineering methodology</p><h2>My work &amp; skills demonstrated</h2><div class="details"><article class="panel"><h3>Model development</h3><p>Created computational domains and meshes, configured material properties and boundary conditions, and selected transient solver settings appropriate to the assigned studies.</p></article><article class="panel"><h3>Analysis &amp; verification</h3><p>Compared numerical results against analytical calculations and controlled case variations. Interpreted contour plots, convergence histories and time-dependent response data.</p></article></div><div class="tags"><span class="tag">ANSYS Fluent 2026 R1</span><span class="tag">Transient simulation</span><span class="tag">Numerical modeling</span><span class="tag">Technical reporting</span><span class="tag">Engineering verification</span></div><p class="note">Source: my MAE 460 Project 1 and Project 2 technical reports, Fall 2026. All figures are original report outputs. Comparisons are limited to the simulated conditions; no experimental validation is claimed.</p><a class="button" href="../index.html#projects">← Explore other projects</a></section>
-</main><footer><div class="wrap footer-flex"><span>Faris Issa · Mechanical Engineering Portfolio</span><a href="https://www.linkedin.com/in/faris-issa/">LinkedIn</a></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Computational Fluid Dynamics | Faris Issa
+  </title>
+  <meta content="ANSYS Fluent simulation studies in heat transfer, compressible flow and multiphase flow." name="description"/>
+  <link href="../assets/style.css" rel="stylesheet"/>
+  <style>
+   .cfd-figure img{object-fit:contain;background:white;aspect-ratio:16/10}.cfd-gallery{align-items:start;margin-bottom:24px}.cfd-gallery figcaption{line-height:1.5}.study{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}.study h3{font-size:25px}.cfd-figure a{display:block}.cfd-figure a:hover img{border-color:var(--accent)}.cfd-hero img{aspect-ratio:16/10;object-fit:contain;background:white}.cfd-label{font-size:13px;color:var(--muted)}.cfd-metrics{margin-bottom:24px}.table-wrap td:first-child{width:auto}@media(max-width:600px){.cfd-figure img{aspect-ratio:auto;min-height:100px}.cfd-hero img{aspect-ratio:auto}}
+  </style>
+ </head>
+ <body>
+  <a class="skip" href="#main">
+   Skip to content
+  </a>
+  <header>
+   <nav aria-label="Main navigation" class="wrap">
+    <a class="brand" href="../index.html">
+     FARIS ISSA / ENGINEERING
+    </a>
+    <div class="navlinks">
+     <a href="../index.html#about">
+      About
+     </a>
+     <a aria-current="page" href="../index.html#projects">
+      Projects
+     </a>
+     <a href="../resume.html">
+      Resume
+     </a>
+     <a href="../index.html#contact">
+      Contact
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main class="wrap" id="main">
+   <section class="page-intro">
+    <a class="back" href="../index.html#projects">
+     ← All projects
+    </a>
+    <p class="eyebrow">
+     Project 03 / Engineering simulation
+    </p>
+    <div class="feature">
+     <div>
+      <h1>
+       Computational Fluid Dynamics
+      </h1>
+      <p class="lead">
+       I used ANSYS Fluent to study heat transfer, compressible flow and transient multiphase systems.
+      </p>
+      <p class="project-label">
+       Arizona State University · MAE 460 Applied CFD · Fall 2026
+      </p>
+      <div class="tags">
+       <span class="tag">
+        ANSYS Fluent
+       </span>
+       <span class="tag">
+        Meshing
+       </span>
+       <span class="tag">
+        Heat transfer
+       </span>
+       <span class="tag">
+        VOF
+       </span>
+       <span class="tag">
+        Data analysis
+       </span>
+      </div>
+     </div>
+     <figure class="photo cfd-hero">
+      <a href="../images/cfd/helical-pipe.webp" rel="noopener" target="_blank">
+       <img alt="ANSYS thermal contour of a heated helical pipe" src="../images/cfd/helical-pipe.webp"/>
+      </a>
+      <figcaption>
+       Original simulation: temperature distribution along a helical pipe.
+      </figcaption>
+     </figure>
+    </div>
+    <div class="metrics cfd-metrics">
+     <div class="metric">
+      <strong>
+       2
+      </strong>
+      <span>
+       Completed CFD projects
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       6
+      </strong>
+      <span>
+       Simulation studies
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       102,400
+      </strong>
+      <span>
+       Elements in droplet model
+      </span>
+     </div>
+    </div>
+    <p class="note">
+     All results on this page come from my CFD simulations. I compared selected results with hand calculations, rather than physical tests.
+    </p>
+    <div class="links">
+     <a class="button" href="#thermal">
+      01 / Thermal &amp; compressible flow
+     </a>
+     <a class="button" href="#multiphase">
+      02 / Multiphase flow
+     </a>
+    </div>
+   </section>
+   <section class="section" id="thermal">
+    <p class="eyebrow">
+     MAE 460 / Project 1
+    </p>
+    <h2>
+     Internal Flow with Thermodynamics
+    </h2>
+    <p class="lead">
+     In my first project, I investigated how fluid motion changes with heat transfer, gravity and compressibility.
+    </p>
+    <article class="study">
+     <h3>
+      01 — Buoyancy-driven thermal convection
+     </h3>
+     <p>
+      I modeled transient water flow using the Boussinesq approximation, calculated the reference properties from a water-density correlation, and compared temperature and velocity fields under Earth and Moon gravity.
+     </p>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Parameter
+         </th>
+         <th>
+          Value
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Operating temperature
+         </td>
+         <td>
+          308.15 K
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Operating density
+         </td>
+         <td>
+          994.03 kg/m³
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Thermal expansion coefficient
+         </td>
+         <td>
+          3.458 × 10⁻⁴ K⁻¹
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Earth / Moon gravity magnitude
+         </td>
+         <td>
+          9.81 / 1.62 m/s²
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/tank-mesh.webp" rel="noopener" target="_blank">
+        <img alt="Tank mesh along the vertical symmetry plane." loading="lazy" src="../images/cfd/tank-mesh.webp"/>
+       </a>
+       <figcaption>
+        Tank mesh along the vertical symmetry plane.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/tank-temperature-300s.webp" rel="noopener" target="_blank">
+        <img alt="Earth gravity: temperature field at 300 s." loading="lazy" src="../images/cfd/tank-temperature-300s.webp"/>
+       </a>
+       <figcaption>
+        Earth gravity: temperature field at 300 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/earth-temperature.webp" rel="noopener" target="_blank">
+        <img alt="Earth gravity: temperature contour at 60 s." loading="lazy" src="../images/cfd/earth-temperature.webp"/>
+       </a>
+       <figcaption>
+        Earth gravity: temperature contour at 60 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/moon-temperature.webp" rel="noopener" target="_blank">
+        <img alt="Moon gravity: temperature contour at 60 s." loading="lazy" src="../images/cfd/moon-temperature.webp"/>
+       </a>
+       <figcaption>
+        Moon gravity: temperature contour at 60 s.
+       </figcaption>
+      </figure>
+     </div>
+     <p>
+      At 60 seconds, I observed a more pronounced downward cold-water plume under Earth gravity. Under Moon gravity, the plume followed a shallower trajectory because of reduced buoyancy.
+     </p>
+    </article>
+    <article class="study">
+     <h3>
+      02 — Helical pipe heat transfer and viscous heating
+     </h3>
+     <p>
+      I simulated heated-wall flow at four inlet velocities and compared the predicted temperature rise with my hand calculations. I also ran a separate glycerin study to examine viscous heating.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/helical-pipe.webp" rel="noopener" target="_blank">
+        <img alt="Heated helical pipe: surface temperature distribution." loading="lazy" src="../images/cfd/helical-pipe.webp"/>
+       </a>
+       <figcaption>
+        Heated helical pipe: surface temperature distribution.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/heat-transfer-comparison.webp" rel="noopener" target="_blank">
+        <img alt="Fluent and hand-calculated temperature rise versus inlet velocity." loading="lazy" src="../images/cfd/heat-transfer-comparison.webp"/>
+       </a>
+       <figcaption>
+        Fluent and hand-calculated temperature rise versus inlet velocity.
+       </figcaption>
+      </figure>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Inlet velocity (m/s)
+         </th>
+         <th>
+          Fluent ΔT (K)
+         </th>
+         <th>
+          Hand calculation ΔT (K)
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          0.01
+         </td>
+         <td>
+          13.88
+         </td>
+         <td>
+          13.589
+         </td>
+        </tr>
+        <tr>
+         <td>
+          0.02
+         </td>
+         <td>
+          7.06
+         </td>
+         <td>
+          6.795
+         </td>
+        </tr>
+        <tr>
+         <td>
+          0.04
+         </td>
+         <td>
+          3.60
+         </td>
+         <td>
+          3.397
+         </td>
+        </tr>
+        <tr>
+         <td>
+          0.08
+         </td>
+         <td>
+          1.83
+         </td>
+         <td>
+          1.699
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      As inlet velocity increased, the predicted temperature rise decreased. The largest absolute difference between my Fluent results and hand calculations was 0.291 K.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/viscous-heating.webp" rel="noopener" target="_blank">
+        <img alt="Glycerin: temperature rise with viscous heating enabled." loading="lazy" src="../images/cfd/viscous-heating.webp"/>
+       </a>
+       <figcaption>
+        Glycerin: temperature rise with viscous heating enabled.
+       </figcaption>
+      </figure>
+     </div>
+     <p>
+      With viscous heating enabled, I found that the predicted temperature rise in glycerin increased from 0.032 K at 1.5 m/s to 0.400 K at 12 m/s.
+     </p>
+    </article>
+    <article class="study">
+     <h3>
+      03 — Transient compressible flow
+     </h3>
+     <p>
+      I compared two pressure-driven chamber-flow cases with the same 200 Pa pressure difference but different absolute pressures. I used a time step of 5.0 × 10⁻⁵ s and examined density, temperature, axial velocity and Mach number at 0.01 s.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/compressible-case1.webp" rel="noopener" target="_blank">
+        <img alt="Case 1: axial velocity contour at 0.01 s." loading="lazy" src="../images/cfd/compressible-case1.webp"/>
+       </a>
+       <figcaption>
+        Case 1: axial velocity contour at 0.01 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/compressible-case2.webp" rel="noopener" target="_blank">
+        <img alt="Case 2: axial velocity contour at 0.01 s." loading="lazy" src="../images/cfd/compressible-case2.webp"/>
+       </a>
+       <figcaption>
+        Case 2: axial velocity contour at 0.01 s.
+       </figcaption>
+      </figure>
+     </div>
+     <p>
+      The peak Mach numbers were approximately 0.064 and 0.124 for Cases 1 and 2. Both remained subsonic, and the lower absolute pressure case produced a faster jet and stronger cooling.
+     </p>
+    </article>
+   </section>
+   <section class="section" id="multiphase">
+    <p class="eyebrow">
+     MAE 460 / Project 2
+    </p>
+    <h2>
+     Transient Multiphase Flow
+    </h2>
+    <p class="lead">
+     For my second project, I used the Volume of Fluid (VOF) model to track phase interfaces and investigate the effects of ventilation, fluid properties and gravity.
+    </p>
+    <article class="study">
+     <h3>
+      01 — Warehouse ventilation
+     </h3>
+     <p>
+      I compared passive ventilation with an additional fresh-air inlet in a two-dimensional methane leakage model. To isolate the effect of ventilation, I kept the structured quadrilateral mesh (8,400 elements), time step (0.01 s) and simulation duration (7 s) the same in both cases.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/warehouse-passive.webp" rel="noopener" target="_blank">
+        <img alt="Case A: methane volume fraction at 2.5 s, side inlet closed." loading="lazy" src="../images/cfd/warehouse-passive.webp"/>
+       </a>
+       <figcaption>
+        Case A: methane volume fraction at 2.5 s, side inlet closed.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/warehouse-active.webp" rel="noopener" target="_blank">
+        <img alt="Case B: methane volume fraction at 2.5 s, side inlet open." loading="lazy" src="../images/cfd/warehouse-active.webp"/>
+       </a>
+       <figcaption>
+        Case B: methane volume fraction at 2.5 s, side inlet open.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/warehouse-index-a.webp" rel="noopener" target="_blank">
+        <img alt="Case A: D-index over 7 s." loading="lazy" src="../images/cfd/warehouse-index-a.webp"/>
+       </a>
+       <figcaption>
+        Case A: D-index over 7 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/warehouse-index-b.webp" rel="noopener" target="_blank">
+        <img alt="Case B: D-index over 7 s." loading="lazy" src="../images/cfd/warehouse-index-b.webp"/>
+       </a>
+       <figcaption>
+        Case B: D-index over 7 s.
+       </figcaption>
+      </figure>
+     </div>
+     <div class="outcome">
+      <p class="eyebrow">
+       Simulation result
+      </p>
+      <h3>
+       Approximately 16.5% lower D-index
+      </h3>
+      <p>
+       At 7 s, the simulated D-index dropped from approximately 0.121 to 0.101 with the added ventilation. Using these approximate values, I calculated a relative reduction of 16.5%.
+      </p>
+     </div>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/warehouse-velocity.webp" rel="noopener" target="_blank">
+        <img alt="Case B: mixture velocity magnitude at 7 s." loading="lazy" src="../images/cfd/warehouse-velocity.webp"/>
+       </a>
+       <figcaption>
+        Case B: mixture velocity magnitude at 7 s.
+       </figcaption>
+      </figure>
+     </div>
+    </article>
+    <article class="study">
+     <h3>
+      02 — Liquid droplets on an inclined plate
+     </h3>
+     <p>
+      I compared engine oil and mercury on a 30° inclined plate using the same geometry, mesh, starting droplet shape and transient settings. I used laminar VOF to observe how the liquid interfaces changed over 0.10 s.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/droplet-initial.webp" rel="noopener" target="_blank">
+        <img alt="Engine oil: initial hemispherical droplet at 0 s." loading="lazy" src="../images/cfd/droplet-initial.webp"/>
+       </a>
+       <figcaption>
+        Engine oil: initial hemispherical droplet at 0 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/droplet-oil.webp" rel="noopener" target="_blank">
+        <img alt="Engine oil: droplet shape at 0.10 s." loading="lazy" src="../images/cfd/droplet-oil.webp"/>
+       </a>
+       <figcaption>
+        Engine oil: droplet shape at 0.10 s.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/droplet-mercury.webp" rel="noopener" target="_blank">
+        <img alt="Mercury: droplet shape at 0.10 s." loading="lazy" src="../images/cfd/droplet-mercury.webp"/>
+       </a>
+       <figcaption>
+        Mercury: droplet shape at 0.10 s.
+       </figcaption>
+      </figure>
+     </div>
+     <p>
+      In my simulations, mercury traveled and spread farther downslope than engine oil. I used 102,400 elements and a 0.001 s time step for both cases.
+     </p>
+    </article>
+    <article class="study">
+     <h3>
+      03 — Free-surface water oscillation in a U-pipe
+     </h3>
+     <p>
+      I modeled a three-dimensional U-pipe with unequal initial water levels and used the air mass-flow rate through the left opening to examine the oscillation. I compared Earth and Mars gravity while keeping the other boundary conditions unchanged.
+     </p>
+     <div class="gallery cfd-gallery">
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/utube-earth.webp" rel="noopener" target="_blank">
+        <img alt="Earth gravity: air mass flow rate at the left opening." loading="lazy" src="../images/cfd/utube-earth.webp"/>
+       </a>
+       <figcaption>
+        Earth gravity: air mass flow rate at the left opening.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/utube-mars.webp" rel="noopener" target="_blank">
+        <img alt="Mars gravity: air mass flow rate at the left opening." loading="lazy" src="../images/cfd/utube-mars.webp"/>
+       </a>
+       <figcaption>
+        Mars gravity: air mass flow rate at the left opening.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/utube-quarter.webp" rel="noopener" target="_blank">
+        <img alt="U-pipe mixture y-velocity at approximately 0.25 period." loading="lazy" src="../images/cfd/utube-quarter.webp"/>
+       </a>
+       <figcaption>
+        U-pipe mixture y-velocity at approximately 0.25 period.
+       </figcaption>
+      </figure>
+      <figure class="photo cfd-figure">
+       <a href="../images/cfd/utube-three-quarter.webp" rel="noopener" target="_blank">
+        <img alt="U-pipe mixture y-velocity at approximately 0.75 period." loading="lazy" src="../images/cfd/utube-three-quarter.webp"/>
+       </a>
+       <figcaption>
+        U-pipe mixture y-velocity at approximately 0.75 period.
+       </figcaption>
+      </figure>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Quantity
+         </th>
+         <th>
+          Earth
+         </th>
+         <th>
+          Mars
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Gravity magnitude
+         </td>
+         <td>
+          9.81 m/s²
+         </td>
+         <td>
+          3.72 m/s²
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Oscillation period (reported)
+         </td>
+         <td>
+          1.0 s
+         </td>
+         <td>
+          1.7 s
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Mesh elements
+         </td>
+         <td>
+          13,806
+         </td>
+         <td>
+          13,806
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      I found that reducing gravity increased the oscillation period, consistent with the expected inverse-square-root relationship with gravity. The velocity contours also showed the flow reversing direction between the two legs.
+     </p>
+    </article>
+   </section>
+   <section class="section">
+    <p class="eyebrow">
+     Engineering methodology
+    </p>
+    <h2>
+     My CFD workflow
+    </h2>
+    <div class="details">
+     <article class="panel">
+      <h3>
+       Model development
+      </h3>
+      <p>
+       I created the computational domains and meshes, assigned material properties and boundary conditions, and configured the transient solver settings for each study.
+      </p>
+     </article>
+     <article class="panel">
+      <h3>
+       Analysis &amp; verification
+      </h3>
+      <p>
+       I compared selected numerical results with hand calculations, reviewed convergence histories, and used contour plots and time-dependent data to understand the flow behavior.
+      </p>
+     </article>
+    </div>
+    <div class="tags">
+     <span class="tag">
+      ANSYS Fluent 2026 R1
+     </span>
+     <span class="tag">
+      Transient simulation
+     </span>
+     <span class="tag">
+      Numerical modeling
+     </span>
+     <span class="tag">
+      Technical reporting
+     </span>
+     <span class="tag">
+      Engineering verification
+     </span>
+    </div>
+    <p class="note">
+     Figures and results are from my MAE 460 Project 1 and Project 2 reports, Fall 2026.
+    </p>
+    <a class="button" href="../index.html#projects">
+     ← Explore other projects
+    </a>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap footer-flex">
+    <span>
+     Faris Issa · Mechanical Engineering Portfolio
+    </span>
+    <a href="https://www.linkedin.com/in/faris-issa/">
+     LinkedIn
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
