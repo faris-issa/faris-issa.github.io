@@ -1,5 +1,514 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>High-Powered Rocketry | Faris Issa</title><meta name="description" content="Mechanical engineering portfolio by Faris Issa."><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/style.css"></head>
-<body><a class="skip" href="#main">Skip to content</a><header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="../index.html">FARIS ISSA / ENGINEERING</a><div class="navlinks"><a href="../index.html#about">About</a><a href="../index.html#projects" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../index.html#contact">Contact</a></div></nav></header><main class="wrap" id="main">
-<section class="page-intro"><a class="back" href="../index.html#projects">← All projects</a><p class="eyebrow">Project 04 / Draft</p><h1>High-Powered Rocketry</h1><p class="lead">Explore practical mechanical engineering through rocketry projects, from CAD and fabrication to interpreting flight data.</p><p class="project-label">Personal and student team projects</p><div class="tags"><span class="tag">CAD</span><span class="tag">Prototyping</span><span class="tag">Flight analysis</span></div><div class="draft"><strong>Case study in development.</strong> This page contains a preliminary outline based on prior project discussions. Verify the details and add original project evidence before sharing publicly.</div></section><section class="section"><div class="details"><article class="panel"><h3>Tools & scope</h3><ul><li>SolidWorks and OpenRocket</li><li>Mechanical prototyping and composite fabrication</li><li>Avionics integration and flight-data interpretation</li></ul></article><article class="panel"><h3>Work to document</h3><ul><li>Developed and fabricated rocket components using CAD and additive manufacturing.</li><li>Participated in student rocketry design and fabrication activities.</li></ul></article></div></section><section class="section"><p class="eyebrow">Project evidence</p><h2>Design, testing and results</h2><div class="card-cover placeholder" style="height:270px;border-radius:10px"><strong>HPR</strong><small>Add your original project image here</small></div><!-- Replace placeholder with <figure class="photo"><img src="../images/rocketry/prototype.jpg" alt="Describe your project"><figcaption>Explain what this photo shows.</figcaption></figure> --><div class="details" style="margin-top:22px"><article class="panel"><h3>My contributions</h3><p>To add: describe what you personally designed, analyzed, built or tested.</p></article><article class="panel"><h3>Results & lessons learned</h3><p>To add: verified measurements, observed behavior, tradeoffs, limitations and next steps. Avoid estimates presented as measured results.</p></article></div></section><section class="section"><p class="eyebrow">To complete this page</p><h2>Documentation checklist</h2><ul class="checklist"><li>Actual rocket and launch photographs</li><li>CAD screenshots and personal contribution summary</li><li>Verified flight data and lessons learned</li></ul></section>
-</main><footer><div class="wrap footer-flex"><span>Faris Issa · Mechanical Engineering Portfolio</span><a href="https://www.linkedin.com/in/faris-issa/">LinkedIn</a></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   High-Powered Rocketry | Faris Issa
+  </title>
+  <meta content="High-powered hobby rocketry: design, fabrication, electronics packaging and field testing." name="description"/>
+  <link href="../assets/style.css" rel="stylesheet"/>
+  <style>
+   .rocket-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}.rocket-result{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px}.rocket-result strong{display:block;font-size:clamp(25px,4vw,38px);line-height:1.2;color:var(--dark);letter-spacing:-.04em}.rocket-result p{margin:8px 0 0;color:var(--muted);font-size:14px}.rocket-result .eyebrow{margin:0 0 8px;color:var(--accent)}@media(max-width:480px){.rocket-results{grid-template-columns:1fr}}.rocket-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.rocket-hero .photo img{aspect-ratio:4/3;object-fit:contain;background:#e9eeeb}.rocket-gallery .photo img{aspect-ratio:4/3;object-fit:contain;background:#e9eeeb}.rocket-gallery .cad img{background:#fff}.rocket-gallery a{display:block}.rocket-gallery a:hover img{border-color:var(--accent)}.rocket-nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.rocket-nav a{font-size:13px;font-weight:650}.rocket-gallery figcaption{min-height:2.5em}.rocket-gallery{row-gap:26px}.rocket-hero .photo img{max-height:430px}.rocket-hero .photo a{display:block}@media(max-width:760px){.rocket-hero{grid-template-columns:1fr;gap:20px}.rocket-hero .photo img{max-height:340px}}
+.rocket-metrics{margin-top:36px}.rocket-metrics .metric span{display:block;max-width:260px}.rocket-hero .cover-photo img{aspect-ratio:4/3;object-fit:cover;object-position:center 47%;max-height:none}.rocket-gallery .photo img{transition:border-color .15s}.plot-feature{margin-top:30px;align-items:start}.plot-feature .photo img{aspect-ratio:auto;max-height:680px;object-fit:contain;background:#242e40}.rocket-gallery{margin-top:28px}.rocket-gallery figcaption{min-height:0}.rocket-nav{gap:15px}.rocket-nav a{white-space:nowrap}@media(max-width:600px){.rocket-metrics{grid-template-columns:1fr}.rocket-metrics .metric{border-left:0;border-top:1px solid var(--line);padding:14px 0}.rocket-metrics .metric:first-child{border-top:0}.rocket-hero .cover-photo img{max-height:none}}
+  </style>
+ </head>
+ <body>
+  <a class="skip" href="#main">
+   Skip to content
+  </a>
+  <header>
+   <nav aria-label="Main navigation" class="wrap">
+    <a class="brand" href="../index.html">
+     FARIS ISSA / ENGINEERING
+    </a>
+    <div class="navlinks">
+     <a href="../index.html#about">
+      About
+     </a>
+     <a aria-current="page" href="../index.html#projects">
+      Projects
+     </a>
+     <a href="../resume.html">
+      Resume
+     </a>
+     <a href="../index.html#contact">
+      Contact
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main class="wrap" id="main">
+   <section class="page-intro">
+    <a class="back" href="../index.html#projects">
+     ← All projects
+    </a>
+    <div class="rocket-hero">
+     <div>
+      <p class="eyebrow">
+       Project 04 / Independent &amp; student engineering
+      </p>
+      <h1>
+       High-Powered Rocketry
+      </h1>
+      <p class="lead">
+       From digital design to field validation: my independent rocket, Key Lime Pie, and my collaborative work on Banana Split with Sun Devil Rocketry.
+      </p>
+      <p>
+       I earned both Level 1 and Level 2 high-power rocketry certifications through the design, fabrication and flight testing of my personal project.
+      </p>
+      <div class="tags">
+       <span class="tag">
+        Mechanical design
+       </span>
+       <span class="tag">
+        Composite fabrication
+       </span>
+       <span class="tag">
+        Electromechanical integration
+       </span>
+       <span class="tag">
+        Flight data analysis
+       </span>
+      </div>
+      <div class="rocket-nav">
+       <a href="#design">
+        Personal project
+       </a>
+       <a href="#electronics">
+        Avionics
+       </a>
+       <a href="#simulation">
+        Simulation
+       </a>
+       <a href="#field">
+        Flight results
+       </a>
+       <a href="#team">
+        Team project
+       </a>
+      </div>
+     </div>
+     <figure class="photo cover-photo">
+      <a aria-label="View full image: Key Lime Pie after recovery, with certification paperwork." href="../images/rocketry/certification-recovery.jpg" rel="noopener" target="_blank">
+       <img alt="Key Lime Pie after recovery, with certification paperwork." decoding="async" fetchpriority="high" src="../images/rocketry/certification-recovery.jpg"/>
+      </a>
+      <figcaption>
+       Key Lime Pie after recovery, with certification paperwork.
+      </figcaption>
+     </figure>
+    </div>
+    <div class="metrics rocket-metrics">
+     <div class="metric">
+      <strong>
+       L1 + L2
+      </strong>
+      <span>
+       Certifications obtained
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       ~6,800 ft
+      </strong>
+      <span>
+       Level 2 altitude above launch (estimated from plot)
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       ~Mach 1.2
+      </strong>
+      <span>
+       Estimated peak speed; not verified by plot
+      </span>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="design">
+    <p class="eyebrow">
+     01 / Independent project
+    </p>
+    <h2>
+     Key Lime Pie
+    </h2>
+    <p class="lead">
+     A personal engineering project spanning concept development, CAD, fabrication, assembly, electronics integration and field testing.
+    </p>
+    <div class="feature">
+     <div>
+      <h3>
+       My contribution
+      </h3>
+      <p>
+       I took responsibility for the complete rocket development process, from initial design to final assembly and flight evaluation. I used SolidWorks for component modeling and OpenRocket for simulation, then translated the digital models into physical hardware.
+      </p>
+      <p>
+       The project demonstrates my ability to manage mechanical interfaces, evaluate fit and manufacturability, and integrate multiple subsystems into a complete assembly.
+      </p>
+     </div>
+     <figure class="photo">
+      <a aria-label="View full image: Completed Key Lime Pie airframe with its green-and-black finish." href="../images/rocketry/painted-rocket.jpg" rel="noopener" target="_blank">
+       <img alt="Completed Key Lime Pie airframe with its green-and-black finish." decoding="async" loading="lazy" src="../images/rocketry/painted-rocket.jpg"/>
+      </a>
+      <figcaption>
+       Completed Key Lime Pie airframe with its green-and-black finish.
+      </figcaption>
+     </figure>
+    </div>
+    <div class="details" style="margin-top:24px">
+     <article class="panel">
+      <h3>
+       Design &amp; prototyping
+      </h3>
+      <p>
+       Created CAD models and physical prototypes to assess component geometry, assembly fit and manufacturability.
+      </p>
+     </article>
+     <article class="panel">
+      <h3>
+       Manufacturing experience
+      </h3>
+      <p>
+       Applied hands-on fabrication, additive manufacturing and assembly skills while documenting the development process.
+      </p>
+     </article>
+    </div>
+    <div class="gallery rocket-gallery">
+     <figure class="photo">
+      <a aria-label="View full image: Airframe assembly before surface finishing." href="../images/rocketry/assembled-unpainted.jpg" rel="noopener" target="_blank">
+       <img alt="Airframe assembly before surface finishing." decoding="async" loading="lazy" src="../images/rocketry/assembled-unpainted.jpg"/>
+      </a>
+      <figcaption>
+       Airframe assembly before surface finishing.
+      </figcaption>
+     </figure>
+     <figure class="photo cad">
+      <a aria-label="View full image: SolidWorks component model." href="../images/rocketry/nose-cad.jpg" rel="noopener" target="_blank">
+       <img alt="SolidWorks component model." decoding="async" loading="lazy" src="../images/rocketry/nose-cad.jpg"/>
+      </a>
+      <figcaption>
+       SolidWorks component model.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Fabricated component prototype." href="../images/rocketry/nose-print.jpg" rel="noopener" target="_blank">
+       <img alt="Fabricated component prototype." decoding="async" loading="lazy" src="../images/rocketry/nose-print.jpg"/>
+      </a>
+      <figcaption>
+       Fabricated component prototype.
+      </figcaption>
+     </figure>
+     <figure class="photo cad">
+      <a aria-label="View full image: CAD model of a custom alignment fixture." href="../images/rocketry/fixture-cad.jpg" rel="noopener" target="_blank">
+       <img alt="CAD model of a custom alignment fixture." decoding="async" loading="lazy" src="../images/rocketry/fixture-cad.jpg"/>
+      </a>
+      <figcaption>
+       CAD model of a custom alignment fixture.
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section class="section" id="electronics">
+    <p class="eyebrow">
+     02 / Electromechanical integration
+    </p>
+    <h2>
+     Avionics packaging
+    </h2>
+    <p class="lead">
+     Designed and fabricated an electronics mounting assembly to accommodate onboard flight and tracking hardware within the available space.
+    </p>
+    <p>
+     This work combined mechanical CAD, component packaging and hands-on electronics integration. The CAD rendering and completed hardware illustrate the transition from concept to assembled hardware.
+    </p>
+    <div class="gallery rocket-gallery">
+     <figure class="photo cad">
+      <a aria-label="View full image: CAD visualization of the onboard electronics assembly." href="../images/rocketry/avionics-cad.jpg" rel="noopener" target="_blank">
+       <img alt="CAD visualization of the onboard electronics assembly." decoding="async" loading="lazy" src="../images/rocketry/avionics-cad.jpg"/>
+      </a>
+      <figcaption>
+       CAD visualization of the onboard electronics assembly.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Fabricated electronics mounting assembly with tracking hardware." href="../images/rocketry/avionics-hardware.jpg" rel="noopener" target="_blank">
+       <img alt="Fabricated electronics mounting assembly with tracking hardware." decoding="async" loading="lazy" src="../images/rocketry/avionics-hardware.jpg"/>
+      </a>
+      <figcaption>
+       Fabricated electronics mounting assembly with tracking hardware.
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section class="section" id="simulation">
+    <p class="eyebrow">
+     03 / Engineering analysis
+    </p>
+    <h2>
+     Simulation &amp; design evaluation
+    </h2>
+    <p>
+     OpenRocket was used to document and evaluate the two certification configurations prior to field testing. Simulation results provide a reference for post-flight analysis; they are distinct from measured flight results.
+    </p>
+    <div class="gallery rocket-gallery">
+     <figure class="photo cad">
+      <a aria-label="View full image: OpenRocket simulation documentation — Level 1 configuration." href="../images/rocketry/openrocket-l1.jpg" rel="noopener" target="_blank">
+       <img alt="OpenRocket simulation documentation — Level 1 configuration." decoding="async" loading="lazy" src="../images/rocketry/openrocket-l1.jpg"/>
+      </a>
+      <figcaption>
+       OpenRocket simulation documentation — Level 1 configuration.
+      </figcaption>
+     </figure>
+     <figure class="photo cad">
+      <a aria-label="View full image: OpenRocket simulation documentation — Level 2 configuration." href="../images/rocketry/openrocket-l2.jpg" rel="noopener" target="_blank">
+       <img alt="OpenRocket simulation documentation — Level 2 configuration." decoding="async" loading="lazy" src="../images/rocketry/openrocket-l2.jpg"/>
+      </a>
+      <figcaption>
+       OpenRocket simulation documentation — Level 2 configuration.
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section class="section" id="field">
+    <p class="eyebrow">
+     04 / Experimental validation
+    </p>
+    <h2>
+     Flight performance &amp; certification
+    </h2>
+    <p class="lead">
+     Both certification flights were completed successfully. The recorded Level 2 altitude trace provides an additional reference for interpreting flight performance.
+    </p>
+    <div class="table-wrap">
+     <table>
+      <thead>
+       <tr>
+        <th scope="col">
+         Metric
+        </th>
+        <th scope="col">
+         Level 1
+        </th>
+        <th scope="col">
+         Level 2
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Certification
+        </td>
+        <td>
+         Obtained
+        </td>
+        <td>
+         Obtained
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Flight altitude above launch
+        </td>
+        <td>
+         ~2,600 ft (reported)
+        </td>
+        <td>
+         ~6,800 ft (plot-derived estimate)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Peak displayed altitude
+        </td>
+        <td>
+         Not provided
+        </td>
+        <td>
+         ~9,000 ft
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Peak speed
+        </td>
+        <td>
+         Not provided
+        </td>
+        <td>
+         ~Mach 1.2 (reported estimate)
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="feature plot-feature">
+     <div>
+      <h3>
+       Interpreting the recorded data
+      </h3>
+      <p>
+       The Level 2 plot shows a preflight altitude of approximately 2,250 ft and a peak near 9,000 ft. Subtracting the preflight baseline gives an altitude gain of about 6,750 ft, consistent with the reported 6,800 ft flight altitude.
+      </p>
+      <p>
+       The altitude reference is not explicitly identified in the screenshot. The Mach 1.2 speed is my estimate and is not independently established by this plot.
+      </p>
+      <p class="note">
+       Values are approximate readings from the supplied screenshot, not a raw telemetry export.
+      </p>
+     </div>
+     <figure class="photo">
+      <a aria-label="View full image: Original Level 2 flight plot: altitude and velocity traces. Click to view at full size." href="../images/rocketry/l2-altitude-plot.jpg" rel="noopener" target="_blank">
+       <img alt="Original Level 2 flight plot: altitude and velocity traces. Click to view at full size." decoding="async" loading="lazy" src="../images/rocketry/l2-altitude-plot.jpg"/>
+      </a>
+      <figcaption>
+       Original Level 2 flight plot: altitude and velocity traces. Click to view at full size.
+      </figcaption>
+     </figure>
+    </div>
+    <div class="gallery rocket-gallery">
+     <figure class="photo">
+      <a aria-label="View full image: Field preparation with the completed rocket." href="../images/rocketry/field-preparation.jpg" rel="noopener" target="_blank">
+       <img alt="Field preparation with the completed rocket." decoding="async" loading="lazy" src="../images/rocketry/field-preparation.jpg"/>
+      </a>
+      <figcaption>
+       Field preparation with the completed rocket.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Rocket at the launch site." href="../images/rocketry/preflight.jpg" rel="noopener" target="_blank">
+       <img alt="Rocket at the launch site." decoding="async" loading="lazy" src="../images/rocketry/preflight.jpg"/>
+      </a>
+      <figcaption>
+       Rocket at the launch site.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Flight testing in the field." href="../images/rocketry/launch.jpg" rel="noopener" target="_blank">
+       <img alt="Flight testing in the field." decoding="async" loading="lazy" src="../images/rocketry/launch.jpg"/>
+      </a>
+      <figcaption>
+       Flight testing in the field.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Post-flight recovery of the rocket and parachutes." href="../images/rocketry/field-recovery.jpg" rel="noopener" target="_blank">
+       <img alt="Post-flight recovery of the rocket and parachutes." decoding="async" loading="lazy" src="../images/rocketry/field-recovery.jpg"/>
+      </a>
+      <figcaption>
+       Post-flight recovery of the rocket and parachutes.
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section class="section" id="team">
+    <p class="eyebrow">
+     05 / Collaborative engineering
+    </p>
+    <h2>
+     Banana Split
+    </h2>
+    <p class="lead">
+     Sun Devil Rocketry · Student team project
+    </p>
+    <div class="feature">
+     <div>
+      <h3>
+       Design &amp; composite manufacturing
+      </h3>
+      <p>
+       As a member of Sun Devil Rocketry, I contributed to the mechanical design and manufacturing of Banana Split, a high-powered rocket developed through collaborative engineering. My work included composite body tube fabrication and hands-on support during the manufacturing and assembly process.
+      </p>
+      <p>
+       Working alongside other team members strengthened my understanding of composite materials, fabrication quality, engineering collaboration and the practical challenges of translating design concepts into physical hardware.
+      </p>
+      <p class="note">
+       Banana Split was a team effort; the personal certifications and flight results above relate to Key Lime Pie.
+      </p>
+     </div>
+     <figure class="photo">
+      <a aria-label="View full image: Completed Banana Split student team rocket." href="../images/rocketry/banana-split.jpg" rel="noopener" target="_blank">
+       <img alt="Completed Banana Split student team rocket." decoding="async" loading="lazy" src="../images/rocketry/banana-split.jpg"/>
+      </a>
+      <figcaption>
+       Completed Banana Split student team rocket.
+      </figcaption>
+     </figure>
+    </div>
+    <div class="gallery rocket-gallery">
+     <figure class="photo">
+      <a aria-label="View full image: Rocketry fabrication documentation: airframe assembly in the workshop." href="../images/rocketry/airframe-build.jpg" rel="noopener" target="_blank">
+       <img alt="Rocketry fabrication documentation: airframe assembly in the workshop." decoding="async" loading="lazy" src="../images/rocketry/airframe-build.jpg"/>
+      </a>
+      <figcaption>
+       Rocketry fabrication documentation: airframe assembly in the workshop.
+      </figcaption>
+     </figure>
+     <figure class="photo">
+      <a aria-label="View full image: Rocketry manufacturing documentation: laser-cut components." href="../images/rocketry/laser-cutting.jpg" rel="noopener" target="_blank">
+       <img alt="Rocketry manufacturing documentation: laser-cut components." decoding="async" loading="lazy" src="../images/rocketry/laser-cutting.jpg"/>
+      </a>
+      <figcaption>
+       Rocketry manufacturing documentation: laser-cut components.
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section class="section">
+    <p class="eyebrow">
+     06 / Engineering takeaways
+    </p>
+    <div class="outcome">
+     <h3>
+      From concept to validated hardware.
+     </h3>
+     <p>
+      These projects demonstrate independent project ownership and collaborative manufacturing experience, with an emphasis on practical mechanical design, fabrication, electromechanical integration and the interpretation of real-world test data.
+     </p>
+    </div>
+    <div class="tags">
+     <span class="tag">
+      SolidWorks
+     </span>
+     <span class="tag">
+      OpenRocket
+     </span>
+     <span class="tag">
+      Additive manufacturing
+     </span>
+     <span class="tag">
+      Composite fabrication
+     </span>
+     <span class="tag">
+      Assembly &amp; fit checks
+     </span>
+     <span class="tag">
+      Electronics packaging
+     </span>
+     <span class="tag">
+      Technical documentation
+     </span>
+    </div>
+    <div class="links">
+     <a class="button primary" href="../index.html#projects">
+      Explore other projects
+     </a>
+     <a class="button" href="../resume.html">
+      View resume
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap footer-flex">
+    <span>
+     Faris Issa · Mechanical Engineering Portfolio
+    </span>
+    <a href="https://www.linkedin.com/in/faris-issa/">
+     LinkedIn
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
